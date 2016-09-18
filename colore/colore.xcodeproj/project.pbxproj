@@ -50,7 +50,7 @@
 		DA6991A91D8E0F250093561A /* coloreUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = coloreUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA6991AD1D8E0F250093561A /* coloreUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = coloreUITests.swift; sourceTree = "<group>"; };
 		DA6991AF1D8E0F250093561A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DA6DF5DC1D8E20C7008F0963 /* splash_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = splash_icon.png; path = ../splash_icon.png; sourceTree = "<group>"; };
+		DA6DF5DC1D8E20C7008F0963 /* splash_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = splash_icon.png; path = ../../splash_icon.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,7 +81,6 @@
 		DA69917F1D8E0F250093561A = {
 			isa = PBXGroup;
 			children = (
-				DA6DF5DC1D8E20C7008F0963 /* splash_icon.png */,
 				DA69918A1D8E0F250093561A /* colore */,
 				DA6991A11D8E0F250093561A /* coloreTests */,
 				DA6991AC1D8E0F250093561A /* coloreUITests */,
@@ -102,6 +101,7 @@
 		DA69918A1D8E0F250093561A /* colore */ = {
 			isa = PBXGroup;
 			children = (
+				DA6DF5DE1D8E22E8008F0963 /* Images */,
 				DA69918B1D8E0F250093561A /* AppDelegate.swift */,
 				DA69918D1D8E0F250093561A /* art.scnassets */,
 				DA69918F1D8E0F250093561A /* GameViewController.swift */,
@@ -129,6 +129,14 @@
 				DA6991AF1D8E0F250093561A /* Info.plist */,
 			);
 			path = coloreUITests;
+			sourceTree = "<group>";
+		};
+		DA6DF5DE1D8E22E8008F0963 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				DA6DF5DC1D8E20C7008F0963 /* splash_icon.png */,
+			);
+			name = Images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
