@@ -15,6 +15,7 @@
 		DA6991981D8E0F250093561A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA6991961D8E0F250093561A /* LaunchScreen.storyboard */; };
 		DA6991A31D8E0F250093561A /* coloreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6991A21D8E0F250093561A /* coloreTests.swift */; };
 		DA6991AE1D8E0F250093561A /* coloreUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6991AD1D8E0F250093561A /* coloreUITests.swift */; };
+		DA6DF5DD1D8E20C7008F0963 /* splash_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = DA6DF5DC1D8E20C7008F0963 /* splash_icon.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		DA6991A91D8E0F250093561A /* coloreUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = coloreUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA6991AD1D8E0F250093561A /* coloreUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = coloreUITests.swift; sourceTree = "<group>"; };
 		DA6991AF1D8E0F250093561A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DA6DF5DC1D8E20C7008F0963 /* splash_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = splash_icon.png; path = ../splash_icon.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +81,7 @@
 		DA69917F1D8E0F250093561A = {
 			isa = PBXGroup;
 			children = (
+				DA6DF5DC1D8E20C7008F0963 /* splash_icon.png */,
 				DA69918A1D8E0F250093561A /* colore */,
 				DA6991A11D8E0F250093561A /* coloreTests */,
 				DA6991AC1D8E0F250093561A /* coloreUITests */,
@@ -236,6 +239,7 @@
 				DA6991981D8E0F250093561A /* LaunchScreen.storyboard in Resources */,
 				DA6991951D8E0F250093561A /* Assets.xcassets in Resources */,
 				DA6991931D8E0F250093561A /* Main.storyboard in Resources */,
+				DA6DF5DD1D8E20C7008F0963 /* splash_icon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -490,6 +494,7 @@
 				DA6991B41D8E0F250093561A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DA6991B51D8E0F250093561A /* Build configuration list for PBXNativeTarget "coloreTests" */ = {
 			isa = XCConfigurationList;
@@ -498,6 +503,7 @@
 				DA6991B71D8E0F250093561A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DA6991B81D8E0F250093561A /* Build configuration list for PBXNativeTarget "coloreUITests" */ = {
 			isa = XCConfigurationList;
@@ -506,6 +512,7 @@
 				DA6991BA1D8E0F250093561A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
