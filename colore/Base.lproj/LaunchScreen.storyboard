@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" initialViewController="01J-lp-oVM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" initialViewController="01J-lp-oVM">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -18,16 +18,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="splash_icon.png" translatesAutoresizingMaskIntoConstraints="NO" id="29r-Ol-jEZ">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="splash_icon.png" translatesAutoresizingMaskIntoConstraints="NO" id="Mxe-AJ-0Ug">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="618"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="29r-Ol-jEZ" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="topMargin" id="BhR-rl-bYy"/>
-                            <constraint firstItem="29r-Ol-jEZ" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" constant="-20" id="NjD-pG-w69"/>
-                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="29r-Ol-jEZ" secondAttribute="bottom" id="hi3-lC-gFD"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="29r-Ol-jEZ" secondAttribute="trailing" constant="-20" id="rEm-e3-Agw"/>
+                            <constraint firstItem="Mxe-AJ-0Ug" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="topMargin" id="T1J-f3-4s5"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="Mxe-AJ-0Ug" secondAttribute="bottom" constant="-18" id="U3y-FC-Dob"/>
+                            <constraint firstItem="Mxe-AJ-0Ug" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" constant="-20" id="XVD-7x-jU2"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Mxe-AJ-0Ug" secondAttribute="trailing" constant="-20" id="pPt-yl-DnC"/>
                         </constraints>
                     </view>
                 </viewController>

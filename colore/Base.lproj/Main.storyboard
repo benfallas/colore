@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--HomeViewController-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" userLabel="HomeViewController" customClass="ViewController" customModule="colore" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bpU-Ge-Ii6">
+                                <rect key="frame" x="231" y="270" width="118" height="30"/>
+                                <state key="normal" title="Help"/>
+                                <connections>
+                                    <segue destination="3jw-IW-qSB" kind="showDetail" id="juZ-sh-GgB"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tr2-DS-zjF">
+                                <rect key="frame" x="236" y="227" width="108" height="30"/>
+                                <state key="normal" title="Play New Game"/>
+                                <connections>
+                                    <segue destination="r9t-rp-pZB" kind="showDetail" id="fGn-7Z-9jz"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-5" y="-44"/>
+        </scene>
+        <!--LevelViewController-->
+        <scene sceneID="2yj-YO-0di">
+            <objects>
+                <viewController id="r9t-rp-pZB" userLabel="LevelViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ykO-Gg-wUW"/>
+                        <viewControllerLayoutGuide type="bottom" id="lDA-Px-sSd"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="REG-Ce-IK2">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5DR-Et-WHc">
+                                <rect key="frame" x="285" y="433" width="30" height="30"/>
+                                <state key="normal" title="Play"/>
+                                <connections>
+                                    <segue destination="vrG-rT-PU9" kind="showDetail" id="ENe-ly-FgR"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="5DR-Et-WHc" firstAttribute="leading" secondItem="REG-Ce-IK2" secondAttribute="leadingMargin" constant="265" id="8mn-r9-FEu"/>
+                            <constraint firstItem="lDA-Px-sSd" firstAttribute="top" secondItem="5DR-Et-WHc" secondAttribute="bottom" constant="137" id="V7J-Ml-KoG"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="5DR-Et-WHc" secondAttribute="trailing" constant="265" id="e6T-Iv-hCo"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="imC-1E-c9q" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1009" y="-44"/>
+        </scene>
+        <!--GameBoardViewController-->
+        <scene sceneID="1la-ry-AFo">
+            <objects>
+                <viewController id="vrG-rT-PU9" userLabel="GameBoardViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Lnv-gT-TZh"/>
+                        <viewControllerLayoutGuide type="bottom" id="7oD-a6-1Ba"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="4OF-AZ-DBT">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <segue destination="r9t-rp-pZB" kind="showDetail" id="aUX-eB-qdt"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="h8n-C8-moq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1041" y="943"/>
+        </scene>
+        <!--HelpViewController-->
+        <scene sceneID="GNI-hj-pOD">
+            <objects>
+                <viewController id="3jw-IW-qSB" userLabel="HelpViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="my2-mz-L0p"/>
+                        <viewControllerLayoutGuide type="bottom" id="gDk-bf-ggC"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="eyk-Pg-eZU">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UpT-kd-eBa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-5" y="702"/>
+        </scene>
+    </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="fGn-7Z-9jz"/>
+    </inferredMetricsTieBreakers>
+</document>

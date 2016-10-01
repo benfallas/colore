@@ -2,8 +2,8 @@
 //  coloreUITests.swift
 //  coloreUITests
 //
-//  Created by Benito Sanchez on 9/17/16.
-//  Copyright © 2016 sanc3823. All rights reserved.
+//  Created by Anita Garcia on 10/1/16.
+//  Copyright © 2016 Anita Garcia. All rights reserved.
 //
 
 import XCTest

@@ -2,8 +2,8 @@
 //  coloreTests.swift
 //  coloreTests
 //
-//  Created by Benito Sanchez on 9/17/16.
-//  Copyright © 2016 sanc3823. All rights reserved.
+//  Created by Anita Garcia on 10/1/16.
+//  Copyright © 2016 Anita Garcia. All rights reserved.
 //
 
 import XCTest
@@ -28,7 +28,7 @@ class coloreTests: XCTestCase {
     
     func testPerformanceExample() {
         // This is an example of a performance test case.
-        self.measure {
+        self.measureBlock {
             // Put the code you want to measure the time of here.
         }
     }
