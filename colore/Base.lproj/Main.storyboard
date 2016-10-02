@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--HomeViewController-->
@@ -43,30 +43,42 @@
         <!--LevelViewController-->
         <scene sceneID="2yj-YO-0di">
             <objects>
-                <viewController id="r9t-rp-pZB" userLabel="LevelViewController" sceneMemberID="viewController">
+                <viewController id="r9t-rp-pZB" userLabel="LevelViewController" customClass="LevelViewController" customModule="colore" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ykO-Gg-wUW"/>
                         <viewControllerLayoutGuide type="bottom" id="lDA-Px-sSd"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="REG-Ce-IK2">
+                    <view key="view" contentMode="scaleToFill" id="REG-Ce-IK2" customClass="Level">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5DR-Et-WHc">
-                                <rect key="frame" x="285" y="433" width="30" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5DS-qk-1hU">
+                                <rect key="frame" x="285" y="525" width="30" height="30"/>
                                 <state key="normal" title="Play"/>
                                 <connections>
-                                    <segue destination="vrG-rT-PU9" kind="showDetail" id="ENe-ly-FgR"/>
+                                    <segue destination="vrG-rT-PU9" kind="show" identifier="PlayButton" id="Van-Sr-F6x"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Level" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qAq-yX-16b">
+                                <rect key="frame" x="219" y="28" width="162" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="5DR-Et-WHc" firstAttribute="leading" secondItem="REG-Ce-IK2" secondAttribute="leadingMargin" constant="265" id="8mn-r9-FEu"/>
-                            <constraint firstItem="lDA-Px-sSd" firstAttribute="top" secondItem="5DR-Et-WHc" secondAttribute="bottom" constant="137" id="V7J-Ml-KoG"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="5DR-Et-WHc" secondAttribute="trailing" constant="265" id="e6T-Iv-hCo"/>
+                            <constraint firstItem="lDA-Px-sSd" firstAttribute="top" secondItem="5DS-qk-1hU" secondAttribute="bottom" constant="45" id="Vy2-sv-S0d"/>
+                            <constraint firstItem="5DS-qk-1hU" firstAttribute="centerX" secondItem="REG-Ce-IK2" secondAttribute="centerX" id="bhd-Z6-z1k"/>
+                            <constraint firstItem="qAq-yX-16b" firstAttribute="centerX" secondItem="5DS-qk-1hU" secondAttribute="centerX" id="iwq-eq-gM7"/>
+                            <constraint firstItem="5DS-qk-1hU" firstAttribute="width" secondItem="REG-Ce-IK2" secondAttribute="height" multiplier="1:20" id="jc9-yz-Fmf"/>
+                            <constraint firstItem="qAq-yX-16b" firstAttribute="top" secondItem="ykO-Gg-wUW" secondAttribute="bottom" constant="8" symbolic="YES" id="nZl-dJ-35v"/>
+                            <constraint firstItem="qAq-yX-16b" firstAttribute="width" secondItem="REG-Ce-IK2" secondAttribute="height" multiplier="27:100" id="vEf-tg-e8E"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="levelLabel" destination="qAq-yX-16b" id="KZb-Mw-l8U"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="imC-1E-c9q" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -85,9 +97,6 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <connections>
-                        <segue destination="r9t-rp-pZB" kind="showDetail" id="aUX-eB-qdt"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h8n-C8-moq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -112,7 +121,4 @@
             <point key="canvasLocation" x="-5" y="702"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="fGn-7Z-9jz"/>
-    </inferredMetricsTieBreakers>
 </document>
