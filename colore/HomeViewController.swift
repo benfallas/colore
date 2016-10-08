@@ -11,16 +11,30 @@ import QuartzCore
 import SceneKit
 
 class HomeViewController: UIViewController{
-    
+    let instColor = SequenceModule.currentSequence
     let inst1 = MasterModule.currentModule
     let inst2 = MasterModule.currentModule
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-    @IBAction func updatePoints() {
-        inst1.updatePoints()
-        print(inst1.getCurrentPoints())
-        inst2.updatePoints()
-        print(inst1.getCurrentPoints())
+    @IBAction func test() {
+        /*print(">>>>>>>>>>>>")
+        inst1.currentPoints = 3
+        print(inst1.currentPoints)
+        inst2.currentPoints = 2
+        print(inst1.currentPoints)
+        instColor.insertColor(UIColor.blackColor())
+        instColor.insertColor(UIColor.blueColor())
+        instColor.insertColor(UIColor.redColor())
+        instColor.printArray()
+        print(">>>>>>>>>>>>")
+        print(instColor.peakHighestInSequence())
+        print("Black" , UIColor.blackColor())
+        print("Red" , UIColor.redColor())
+        instColor.removeHighestInSequence()
+        print(">>>>>>>>>>>>")
+        instColor.printArray()
+        print(instColor.peakHighestInSequence())*/
+        
     }
 }

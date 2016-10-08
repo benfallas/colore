@@ -18,6 +18,7 @@
 		8FB340931DA04E8E00B470CB /* splash_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB340921DA04E8E00B470CB /* splash_icon.png */; };
 		8FB340951DA04EE000B470CB /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FB340941DA04EE000B470CB /* HomeViewController.swift */; };
 		8FB340971DA04EFD00B470CB /* MasterModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FB340961DA04EFD00B470CB /* MasterModule.swift */; };
+		8FB3409D1DA072B200B470CB /* SequenceModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FB3409C1DA072B200B470CB /* SequenceModule.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		8FB340921DA04E8E00B470CB /* splash_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = splash_icon.png; sourceTree = "<group>"; };
 		8FB340941DA04EE000B470CB /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		8FB340961DA04EFD00B470CB /* MasterModule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MasterModule.swift; sourceTree = "<group>"; };
+		8FB3409C1DA072B200B470CB /* SequenceModule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SequenceModule.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +117,7 @@
 				8FB3406B1DA04E2B00B470CB /* LaunchScreen.storyboard */,
 				8FB340961DA04EFD00B470CB /* MasterModule.swift */,
 				8FB3406E1DA04E2B00B470CB /* Info.plist */,
+				8FB3409C1DA072B200B470CB /* SequenceModule.swift */,
 			);
 			path = colore;
 			sourceTree = "<group>";
@@ -272,6 +275,7 @@
 			files = (
 				8FB340651DA04E2B00B470CB /* ViewController.swift in Sources */,
 				8FB340631DA04E2B00B470CB /* AppDelegate.swift in Sources */,
+				8FB3409D1DA072B200B470CB /* SequenceModule.swift in Sources */,
 				8FB340951DA04EE000B470CB /* HomeViewController.swift in Sources */,
 				8FB340971DA04EFD00B470CB /* MasterModule.swift in Sources */,
 			);
@@ -500,6 +504,7 @@
 				8FB340891DA04E2B00B470CB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8FB3408A1DA04E2B00B470CB /* Build configuration list for PBXNativeTarget "coloreTests" */ = {
 			isa = XCConfigurationList;
@@ -508,6 +513,7 @@
 				8FB3408C1DA04E2B00B470CB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8FB3408D1DA04E2B00B470CB /* Build configuration list for PBXNativeTarget "coloreUITests" */ = {
 			isa = XCConfigurationList;
@@ -516,6 +522,7 @@
 				8FB3408F1DA04E2B00B470CB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

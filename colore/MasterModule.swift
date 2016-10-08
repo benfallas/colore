@@ -8,27 +8,53 @@
 import UIKit
 import Foundation
 
-
 class MasterModule{
     static let currentModule = MasterModule()
+    private var _colors = [UIColor.yellowColor(), UIColor.orangeColor(), UIColor.redColor(),
+                           UIColor.greenColor(), UIColor.blackColor(), UIColor.magentaColor(),
+                           UIColor.cyanColor(), UIColor.blueColor(), UIColor.purpleColor()]
     
-   /* var colors = [UIColor.yellowColor(), UIColor.orange, UIColor.red,
-                           UIColor.green, UIColor.black, UIColor.magenta,
-                           UIColor.cyan, UIColor.blue, UIColor.purple]*/
-    var currentLevel = 1
-    var currentPoints = 0
-    var highestScore = 0
+    func getColorAt(index:Int) -> UIColor{
+        return _colors[index];
+    }
     
+    private var _currentLevel: Int = 1
+    var currentLevel: Int {
+        get {
+            return _currentLevel
+        }
+        set(updateLevel){
+            if(updateLevel >= 1){
+                _currentLevel = updateLevel
+            }
+        }
+    }
+    private var _currentPoints:Int = 0
+    var currentPoints:Int {
+        get {
+            return _currentPoints
+        }
+        set(updatePoints){
+            if(updatePoints >= 1){
+                _currentPoints = updatePoints
+            }
+        }
+    }
+    
+    private var _highestScore = 0
+    var highestScore:Int {
+        get {
+            return _highestScore
+        }
+        set(updateScore){
+            if(updateScore >= 1){
+                _highestScore = updateScore
+            }
+        }
+    }
     
     static func getCurrentModule() -> MasterModule{
         return currentModule
     }
     
-    func updatePoints(){
-        currentPoints+=1
-    }
-    func getCurrentPoints() -> Int{
-        return currentPoints
-    }
 }
-//let _MasterModuleInstance = MasterModule()
