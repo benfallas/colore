@@ -19,9 +19,8 @@
 		8FB340951DA04EE000B470CB /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FB340941DA04EE000B470CB /* HomeViewController.swift */; };
 		8FB340971DA04EFD00B470CB /* MasterModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FB340961DA04EFD00B470CB /* MasterModule.swift */; };
 		8FB3409D1DA072B200B470CB /* SequenceModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FB3409C1DA072B200B470CB /* SequenceModule.swift */; };
-		DA9646C51DA464F2004E4BEC /* LevelTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9646C41DA464F2004E4BEC /* LevelTracker.swift */; };
-		DAEC55721DA05C1E000C67B6 /* LevelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEC55711DA05C1E000C67B6 /* LevelViewController.swift */; };
-		DAEC55741DA0C06A000C67B6 /* LevelModelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEC55731DA0C06A000C67B6 /* LevelModelViewController.swift */; };
+		DAEC55721DA05C1E000C67B6 /* LevelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEC55711DA05C1E000C67B6 /* LevelController.swift */; };
+		DAEC55741DA0C06A000C67B6 /* LevelModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEC55731DA0C06A000C67B6 /* LevelModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,9 +59,8 @@
 		8FB340941DA04EE000B470CB /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		8FB340961DA04EFD00B470CB /* MasterModule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MasterModule.swift; sourceTree = "<group>"; };
 		8FB3409C1DA072B200B470CB /* SequenceModule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SequenceModule.swift; sourceTree = "<group>"; };
-		DA9646C41DA464F2004E4BEC /* LevelTracker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LevelTracker.swift; sourceTree = "<group>"; };
-		DAEC55711DA05C1E000C67B6 /* LevelViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LevelViewController.swift; sourceTree = "<group>"; };
-		DAEC55731DA0C06A000C67B6 /* LevelModelViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LevelModelViewController.swift; sourceTree = "<group>"; };
+		DAEC55711DA05C1E000C67B6 /* LevelController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LevelController.swift; sourceTree = "<group>"; };
+		DAEC55731DA0C06A000C67B6 /* LevelModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LevelModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,18 +111,16 @@
 		8FB340611DA04E2B00B470CB /* colore */ = {
 			isa = PBXGroup;
 			children = (
+				DA0F653F1DB1731500CC0CB6 /* images */,
+				DA0F653C1DB16A5D00CC0CB6 /* Modules */,
 				DAEC55701DA05BF2000C67B6 /* LevelScreen */,
-				8FB340901DA04E8400B470CB /* app_icon.png */,
-				8FB340921DA04E8E00B470CB /* splash_icon.png */,
 				8FB340621DA04E2B00B470CB /* AppDelegate.swift */,
 				8FB340641DA04E2B00B470CB /* ViewController.swift */,
 				8FB340661DA04E2B00B470CB /* Main.storyboard */,
 				8FB340941DA04EE000B470CB /* HomeViewController.swift */,
 				8FB340691DA04E2B00B470CB /* Assets.xcassets */,
 				8FB3406B1DA04E2B00B470CB /* LaunchScreen.storyboard */,
-				8FB340961DA04EFD00B470CB /* MasterModule.swift */,
 				8FB3406E1DA04E2B00B470CB /* Info.plist */,
-				8FB3409C1DA072B200B470CB /* SequenceModule.swift */,
 			);
 			path = colore;
 			sourceTree = "<group>";
@@ -147,12 +143,29 @@
 			path = coloreUITests;
 			sourceTree = "<group>";
 		};
+		DA0F653C1DB16A5D00CC0CB6 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				8FB3409C1DA072B200B470CB /* SequenceModule.swift */,
+				8FB340961DA04EFD00B470CB /* MasterModule.swift */,
+			);
+			name = Modules;
+			sourceTree = "<group>";
+		};
+		DA0F653F1DB1731500CC0CB6 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				8FB340921DA04E8E00B470CB /* splash_icon.png */,
+				8FB340901DA04E8400B470CB /* app_icon.png */,
+			);
+			name = images;
+			sourceTree = "<group>";
+		};
 		DAEC55701DA05BF2000C67B6 /* LevelScreen */ = {
 			isa = PBXGroup;
 			children = (
-				DAEC55711DA05C1E000C67B6 /* LevelViewController.swift */,
-				DAEC55731DA0C06A000C67B6 /* LevelModelViewController.swift */,
-				DA9646C41DA464F2004E4BEC /* LevelTracker.swift */,
+				DAEC55711DA05C1E000C67B6 /* LevelController.swift */,
+				DAEC55731DA0C06A000C67B6 /* LevelModel.swift */,
 			);
 			name = LevelScreen;
 			sourceTree = "<group>";
@@ -291,13 +304,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				8FB340651DA04E2B00B470CB /* ViewController.swift in Sources */,
-				DAEC55721DA05C1E000C67B6 /* LevelViewController.swift in Sources */,
+				DAEC55721DA05C1E000C67B6 /* LevelController.swift in Sources */,
 				8FB340631DA04E2B00B470CB /* AppDelegate.swift in Sources */,
 				8FB3409D1DA072B200B470CB /* SequenceModule.swift in Sources */,
 				8FB340951DA04EE000B470CB /* HomeViewController.swift in Sources */,
-				DA9646C51DA464F2004E4BEC /* LevelTracker.swift in Sources */,
 				8FB340971DA04EFD00B470CB /* MasterModule.swift in Sources */,
-				DAEC55741DA0C06A000C67B6 /* LevelModelViewController.swift in Sources */,
+				DAEC55741DA0C06A000C67B6 /* LevelModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

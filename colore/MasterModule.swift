@@ -14,6 +14,14 @@ class MasterModule{
                            UIColor.greenColor(), UIColor.blackColor(), UIColor.magentaColor(),
                            UIColor.cyanColor(), UIColor.blueColor(), UIColor.purpleColor()]
     
+    static func getCurrentModule() -> MasterModule {
+        return currentModule
+    }
+    
+    internal func getNumOfColors() -> Int {
+        return _colors.count
+    }
+    
     func getColorAt(index:Int) -> UIColor{
         return _colors[index];
     }
@@ -52,9 +60,4 @@ class MasterModule{
             }
         }
     }
-    
-    static func getCurrentModule() -> MasterModule{
-        return currentModule
-    }
-    
 }

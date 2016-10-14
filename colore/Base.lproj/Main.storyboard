@@ -40,10 +40,10 @@
             </objects>
             <point key="canvasLocation" x="-5" y="-44"/>
         </scene>
-        <!--LevelViewController-->
+        <!--LevelController-->
         <scene sceneID="2yj-YO-0di">
             <objects>
-                <viewController id="r9t-rp-pZB" userLabel="LevelViewController" customClass="LevelViewController" customModule="colore" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="r9t-rp-pZB" userLabel="LevelController" customClass="LevelController" customModule="colore" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ykO-Gg-wUW"/>
                         <viewControllerLayoutGuide type="bottom" id="lDA-Px-sSd"/>
@@ -62,7 +62,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Level" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qAq-yX-16b">
                                 <rect key="frame" x="219" y="28" width="162" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
