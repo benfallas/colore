@@ -6,9 +6,12 @@
 import UIKit
 
 class BoardViewController: UICollectionViewController {
+
+    private var sequenceModule : SequenceModule!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        sequenceModule = SequenceModule.currentSequence
     }
     
     override func numberOfSectionsInCollectionView(collectionView: UICollectionView?) -> Int {
@@ -24,6 +27,10 @@ class BoardViewController: UICollectionViewController {
         return 9
     }
     
+    func randomColor(size : Int) -> Int {
+        return Int(arc4random_uniform(UInt32(size)))
+    }
+    
     /**
      - sets each buttons background color.
     */
@@ -34,8 +41,9 @@ class BoardViewController: UICollectionViewController {
         let cell : BoardCell = collectionView.dequeueReusableCellWithReuseIdentifier(
             "Cell",
             forIndexPath: indexPath) as! BoardCell
-
-        cell.cellButton?.backgroundColor = UIColor.blueColor()
+        
+        cell.cellButton?.backgroundColor = sequenceModule.getColorSequence()[randomColor(sequenceModule.getSize())]
         return cell
     }
+
 }

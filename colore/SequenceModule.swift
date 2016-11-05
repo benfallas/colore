@@ -24,6 +24,10 @@ class SequenceModule{
     func getColorSequence() -> [UIColor]{
         return colorSequence
     }
+    
+    func getSize() -> Int {
+        return colorSequence.count
+    }
     func printArray(){
         print(colorSequence)
     }
