@@ -1,10 +1,7 @@
-//
-//  BoardCell.swift
-//  colore
-//
-//  Created by Benito Sanchez on 11/5/16.
-//  Copyright © 2016 Anita Garcia. All rights reserved.
-//
+/**
+ - Board Cell
+ - Contains a connection to the UIButton inside the cell
+*/
 
 import UIKit
 
