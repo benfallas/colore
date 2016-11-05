@@ -19,6 +19,8 @@
 		8FB340951DA04EE000B470CB /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FB340941DA04EE000B470CB /* HomeViewController.swift */; };
 		8FB340971DA04EFD00B470CB /* MasterModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FB340961DA04EFD00B470CB /* MasterModule.swift */; };
 		8FB3409D1DA072B200B470CB /* SequenceModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FB3409C1DA072B200B470CB /* SequenceModule.swift */; };
+		DA2CDD541DCE5747009F60F6 /* BoardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2CDD531DCE5747009F60F6 /* BoardCell.swift */; };
+		DA2CDD561DCE57A4009F60F6 /* BoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2CDD551DCE57A4009F60F6 /* BoardViewController.swift */; };
 		DAEC55721DA05C1E000C67B6 /* LevelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEC55711DA05C1E000C67B6 /* LevelController.swift */; };
 		DAEC55741DA0C06A000C67B6 /* LevelModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEC55731DA0C06A000C67B6 /* LevelModel.swift */; };
 /* End PBXBuildFile section */
@@ -59,6 +61,8 @@
 		8FB340941DA04EE000B470CB /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		8FB340961DA04EFD00B470CB /* MasterModule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MasterModule.swift; sourceTree = "<group>"; };
 		8FB3409C1DA072B200B470CB /* SequenceModule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SequenceModule.swift; sourceTree = "<group>"; };
+		DA2CDD531DCE5747009F60F6 /* BoardCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoardCell.swift; sourceTree = "<group>"; };
+		DA2CDD551DCE57A4009F60F6 /* BoardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoardViewController.swift; sourceTree = "<group>"; };
 		DAEC55711DA05C1E000C67B6 /* LevelController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LevelController.swift; sourceTree = "<group>"; };
 		DAEC55731DA0C06A000C67B6 /* LevelModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LevelModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -121,6 +125,8 @@
 				8FB340691DA04E2B00B470CB /* Assets.xcassets */,
 				8FB3406B1DA04E2B00B470CB /* LaunchScreen.storyboard */,
 				8FB3406E1DA04E2B00B470CB /* Info.plist */,
+				DA2CDD531DCE5747009F60F6 /* BoardCell.swift */,
+				DA2CDD551DCE57A4009F60F6 /* BoardViewController.swift */,
 			);
 			path = colore;
 			sourceTree = "<group>";
@@ -305,11 +311,13 @@
 			files = (
 				8FB340651DA04E2B00B470CB /* ViewController.swift in Sources */,
 				DAEC55721DA05C1E000C67B6 /* LevelController.swift in Sources */,
+				DA2CDD541DCE5747009F60F6 /* BoardCell.swift in Sources */,
 				8FB340631DA04E2B00B470CB /* AppDelegate.swift in Sources */,
 				8FB3409D1DA072B200B470CB /* SequenceModule.swift in Sources */,
 				8FB340951DA04EE000B470CB /* HomeViewController.swift in Sources */,
 				8FB340971DA04EFD00B470CB /* MasterModule.swift in Sources */,
 				DAEC55741DA0C06A000C67B6 /* LevelModel.swift in Sources */,
+				DA2CDD561DCE57A4009F60F6 /* BoardViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
