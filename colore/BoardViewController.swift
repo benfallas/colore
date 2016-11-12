@@ -43,7 +43,38 @@ class BoardViewController: UICollectionViewController {
             forIndexPath: indexPath) as! BoardCell
         
         cell.cellButton?.backgroundColor = sequenceModule.getColorSequence()[randomColor(sequenceModule.getSize())]
+        cell.cellButton?.layer.borderColor = UIColor.blackColor().CGColor
+        cell.cellButton?.layer.borderWidth = 1
         return cell
     }
 
+    
+    func collectionView(collectionView: UICollectionView,
+                                   layout collectionViewLayout: UICollectionViewLayout,
+                                          sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
+        let screenSize: CGRect = UIScreen.mainScreen().bounds
+        let screenWidth = (1.0) * screenSize.width * (1.0/3.0)
+        let screenHeight = (1.0) * screenSize.height * (1.0/3.0)
+        
+        return CGSize(width: screenWidth, height: screenHeight)
+    }
+    
+    func collectionView(collectionView: UICollectionView,
+                        layout collectionViewLayout: UICollectionViewLayout,
+                               minimumInteritemSpacingForSectionAtIndex section: Int) -> CGFloat {
+        return 0
+    }
+    
+    func collectionView(collectionView: UICollectionView, layout
+        collectionViewLayout: UICollectionViewLayout,
+        minimumLineSpacingForSectionAtIndex section: Int) -> CGFloat {
+        return 0
+    }
+    override func shouldAutorotate() -> Bool {
+        return false
+    }
+    
+    override func supportedInterfaceOrientations() -> UIInterfaceOrientationMask {
+        return UIInterfaceOrientationMask.Portrait
+    }
 }
