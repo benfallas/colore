@@ -17,7 +17,7 @@ class LevelModel {
     
     internal init () {
         masterModule = MasterModule.getCurrentModule()
-        sequenceModule = SequenceModule.currentSequence
+        sequenceModule = SequenceModule.getCurrentModule()
         
         selectedColors = []
         randomlySelectColor()

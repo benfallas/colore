@@ -9,7 +9,7 @@ import UIKit
 import Foundation
 
 class MasterModule{
-    static let currentModule = MasterModule()
+    private static let currentModule = MasterModule()
     private var _colors = [UIColor.yellowColor(), UIColor.orangeColor(), UIColor.redColor(),
                            UIColor.greenColor(), UIColor.blackColor(), UIColor.magentaColor(),
                            UIColor.cyanColor(), UIColor.blueColor(), UIColor.purpleColor()]
@@ -26,7 +26,7 @@ class MasterModule{
         return _colors[index];
     }
     
-    private var _currentLevel: Int = 5
+    private var _currentLevel: Int = 1
     var currentLevel: Int {
         get {
             return _currentLevel

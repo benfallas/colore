@@ -8,10 +8,25 @@ import UIKit
 class BoardViewController: UICollectionViewController {
 
     private var sequenceModule : SequenceModule!
+    var board = BoardModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        sequenceModule = SequenceModule.currentSequence
+        sequenceModule = SequenceModule.getCurrentModule()
+        // Initialize board
+        board.initBoard()
+        print_()
+    }
+    
+    /**
+     - This is to that the board is randomly filled
+     */
+    func print_(){
+        print("Board")
+        for element in board.getBoard() {
+            print(element)
+            print("\n")
+        }
     }
     
     override func numberOfSectionsInCollectionView(collectionView: UICollectionView?) -> Int {

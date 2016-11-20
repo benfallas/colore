@@ -9,7 +9,7 @@ import UIKit
 import Foundation
 
 class SequenceModule{
-    static let currentSequence = SequenceModule()
+    private static let currentSequence = SequenceModule()
     private var colorSequence = [UIColor]()
     
     func insertColor(color:UIColor){
@@ -30,6 +30,15 @@ class SequenceModule{
     }
     func printArray(){
         print(colorSequence)
+    }
+    func size() -> Int{
+        return colorSequence.count
+    }
+    static func getCurrentModule() -> SequenceModule{
+        return currentSequence
+    }
+    func getColorAt(index:Int) -> UIColor{
+       return colorSequence[index]
     }
 }
 

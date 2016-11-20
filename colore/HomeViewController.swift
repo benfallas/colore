@@ -12,9 +12,9 @@ import SceneKit
 
 class HomeViewController: UIViewController{
     
-    let instColor = SequenceModule.currentSequence
+    /*let instColor = SequenceModule.currentSequence
     let inst1 = MasterModule.currentModule
-    let inst2 = MasterModule.currentModule
+    let inst2 = MasterModule.currentModule*/
     
     override func viewDidLoad() {
         super.viewDidLoad()
