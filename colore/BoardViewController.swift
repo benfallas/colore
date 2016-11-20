@@ -8,25 +8,16 @@ import UIKit
 class BoardViewController: UICollectionViewController {
 
     private var sequenceModule : SequenceModule!
-    var board = BoardModel()
+    var boardModel = BoardModel()
+    var buttonIndex : Int = 0;
+    var board : [UIColor?] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         sequenceModule = SequenceModule.getCurrentModule()
         // Initialize board
-        board.initBoard()
-        print_()
-    }
-    
-    /**
-     - This is to that the board is randomly filled
-     */
-    func print_(){
-        print("Board")
-        for element in board.getBoard() {
-            print(element)
-            print("\n")
-        }
+        boardModel.initBoard()
+        board = boardModel.getBoard()
     }
     
     override func numberOfSectionsInCollectionView(collectionView: UICollectionView?) -> Int {
@@ -57,9 +48,12 @@ class BoardViewController: UICollectionViewController {
             "Cell",
             forIndexPath: indexPath) as! BoardCell
         
-        cell.cellButton?.backgroundColor = sequenceModule.getColorSequence()[randomColor(sequenceModule.getSize())]
+        cell.cellButton?.backgroundColor = board[buttonIndex]
         cell.cellButton?.layer.borderColor = UIColor.blackColor().CGColor
         cell.cellButton?.layer.borderWidth = 1
+        
+        buttonIndex += 1;
+        
         return cell
     }
 

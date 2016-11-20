@@ -33,6 +33,14 @@ class BoardModel{
         stateOfBoard = [Cell?](count: SEQUENCE_SIZE, repeatedValue: nil)
     }
     
+    func getBoardSize() -> Int{
+        return BOARD_SIZE;
+    }
+    
+    func getBoard() -> [UIColor?]{
+        return board
+    }
+    
     func initBoard(){
         var color: UIColor
         var randomColor: UIColor
@@ -63,9 +71,5 @@ class BoardModel{
             randomColor = sequenceModule.getColorAt(randomColorIndex)
             board[cellToFill] = randomColor;
         }
-    }
-    
-    func getBoard() -> [UIColor?]{
-        return board
     }
 }
