@@ -11,6 +11,7 @@ class BoardViewController: UICollectionViewController {
     var boardModel = BoardModel()
     var buttonIndex : Int = 0;
     var board : [UIColor?] = []
+    var state = [UIColor: Int]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,6 +19,11 @@ class BoardViewController: UICollectionViewController {
         // Initialize board
         boardModel.initBoard()
         board = boardModel.getBoard()
+        state = boardModel.getState()
+        print (">><<")
+        for (color, occurence) in  state {
+            print("\(color): \(occurence)")
+        }
     }
     
     override func numberOfSectionsInCollectionView(collectionView: UICollectionView?) -> Int {

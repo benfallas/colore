@@ -14,13 +14,17 @@ class BoardModel{
     struct Cell {
         var color: UIColor
         var numOfOccurences: Int
+        
+        mutating func decrement(){
+            self.numOfOccurences -= 1;
+        }
     }
     
     private var masterModule : MasterModule
     private var sequenceModule : SequenceModule
     private var utilityModule: UtilityModule
     private var board = [UIColor?]()
-    private var stateOfBoard = [Cell?]()
+    private var state = [UIColor: Int]()
     private let BOARD_SIZE = 9
     private var SEQUENCE_SIZE: Int
     
@@ -30,7 +34,6 @@ class BoardModel{
         SEQUENCE_SIZE = sequenceModule.size()
         utilityModule = UtilityModule.getCurrentModule()
         board = [UIColor?](count: BOARD_SIZE, repeatedValue: nil)
-        stateOfBoard = [Cell?](count: SEQUENCE_SIZE, repeatedValue: nil)
     }
     
     func getBoardSize() -> Int{
@@ -41,6 +44,9 @@ class BoardModel{
         return board
     }
     
+    func getState() -> [UIColor: Int]{
+        return state;
+    }
     func initBoard(){
         var color: UIColor
         var randomColor: UIColor
@@ -56,6 +62,7 @@ class BoardModel{
             }
             color = sequenceModule.getColorAt(i)
             board[cellToFill] = color;
+            state[color] = 1;
         }
         
         for _ in 0..<(BOARD_SIZE - SEQUENCE_SIZE) {
@@ -70,6 +77,8 @@ class BoardModel{
             randomColorIndex = UtilityModule.getRandomNumber(SEQUENCE_SIZE)
             randomColor = sequenceModule.getColorAt(randomColorIndex)
             board[cellToFill] = randomColor;
+            state[randomColor] = state[randomColor]! + 1;
         }
     }
+    
 }

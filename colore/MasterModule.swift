@@ -26,7 +26,7 @@ class MasterModule{
         return _colors[index];
     }
     
-    private var _currentLevel: Int = 7
+    private var _currentLevel: Int = 1
     var currentLevel: Int {
         get {
             return _currentLevel
