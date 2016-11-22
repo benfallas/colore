@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -30,7 +30,7 @@
                                 <rect key="frame" x="236" y="227" width="108" height="30"/>
                                 <state key="normal" title="Play New Game"/>
                                 <connections>
-                                    <segue destination="r9t-rp-pZB" kind="showDetail" id="fGn-7Z-9jz"/>
+                                    <segue destination="r9t-rp-pZB" kind="showDetail" identifier="Play New Game" id="fGn-7Z-9jz"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -137,10 +137,31 @@
                     </collectionView>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="600" height="600"/>
+                    <connections>
+                        <segue destination="BcS-Nl-Syd" kind="showDetail" identifier="Game Over" id="snK-5a-sae"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h8n-C8-moq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1009" y="937"/>
+        </scene>
+        <!--GameOverViewController-->
+        <scene sceneID="0af-BT-8y4">
+            <objects>
+                <viewController title="GameOverViewController" id="BcS-Nl-Syd" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="esw-fW-nAq"/>
+                        <viewControllerLayoutGuide type="bottom" id="T9S-wj-9k1"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8ul-JH-Hd2">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tsn-ah-tLx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1859" y="937"/>
         </scene>
         <!--HelpViewController-->
         <scene sceneID="GNI-hj-pOD">

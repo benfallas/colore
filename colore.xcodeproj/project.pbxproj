@@ -25,6 +25,7 @@
 		DA2CDD561DCE57A4009F60F6 /* BoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2CDD551DCE57A4009F60F6 /* BoardViewController.swift */; };
 		DAEC55721DA05C1E000C67B6 /* LevelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEC55711DA05C1E000C67B6 /* LevelController.swift */; };
 		DAEC55741DA0C06A000C67B6 /* LevelModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEC55731DA0C06A000C67B6 /* LevelModel.swift */; };
+		E35B8B7C1DE3FE7F0034888D /* GameOverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E35B8B7B1DE3FE7F0034888D /* GameOverViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +70,7 @@
 		DA2CDD551DCE57A4009F60F6 /* BoardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoardViewController.swift; sourceTree = "<group>"; };
 		DAEC55711DA05C1E000C67B6 /* LevelController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LevelController.swift; sourceTree = "<group>"; };
 		DAEC55731DA0C06A000C67B6 /* LevelModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LevelModel.swift; sourceTree = "<group>"; };
+		E35B8B7B1DE3FE7F0034888D /* GameOverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameOverViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +138,7 @@
 				8FB340621DA04E2B00B470CB /* AppDelegate.swift */,
 				8FB340641DA04E2B00B470CB /* ViewController.swift */,
 				8FB340661DA04E2B00B470CB /* Main.storyboard */,
+				E35B8B7B1DE3FE7F0034888D /* GameOverViewController.swift */,
 				8FB340941DA04EE000B470CB /* HomeViewController.swift */,
 				8FB340691DA04E2B00B470CB /* Assets.xcassets */,
 				8FB3406B1DA04E2B00B470CB /* LaunchScreen.storyboard */,
@@ -331,6 +334,7 @@
 				8FC3B52E1DCE65AA00B68645 /* UtilityModule.swift in Sources */,
 				8F1791651DCD164200307999 /* BoardModel.swift in Sources */,
 				8FB340951DA04EE000B470CB /* HomeViewController.swift in Sources */,
+				E35B8B7C1DE3FE7F0034888D /* GameOverViewController.swift in Sources */,
 				8FB340971DA04EFD00B470CB /* MasterModule.swift in Sources */,
 				DAEC55741DA0C06A000C67B6 /* LevelModel.swift in Sources */,
 				DA2CDD561DCE57A4009F60F6 /* BoardViewController.swift in Sources */,
