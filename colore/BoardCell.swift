@@ -11,5 +11,5 @@ class BoardCell: UICollectionViewCell {
     
     @IBAction func cellButtonClicked(sender: UIButton) {
         print(sender.backgroundColor!)
-    }
+    }    
 }

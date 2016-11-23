@@ -24,6 +24,7 @@ class BoardViewController: UICollectionViewController {
         for (color, occurence) in  state {
             print("\(color): \(occurence)")
         }
+        
     }
     
     override func numberOfSectionsInCollectionView(collectionView: UICollectionView?) -> Int {
