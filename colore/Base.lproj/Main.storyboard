@@ -26,15 +26,8 @@
                                     <segue destination="r9t-rp-pZB" kind="showDetail" identifier="Play New Game" id="fGn-7Z-9jz"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ebA-wJ-yHT">
-                                <rect key="frame" x="243" y="265" width="95" height="30"/>
-                                <state key="normal" title="Leaderboards"/>
-                                <connections>
-                                    <segue destination="BcS-Nl-Syd" kind="showDetail" identifier="Leaderboards" id="cng-Fh-Oi8"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bpU-Ge-Ii6">
-                                <rect key="frame" x="231" y="303" width="118" height="30"/>
+                                <rect key="frame" x="231" y="265" width="118" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="118" id="yqp-d3-9z7"/>
                                 </constraints>
@@ -46,12 +39,10 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="ebA-wJ-yHT" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="243" id="LNe-ej-IBH"/>
-                            <constraint firstItem="Tr2-DS-zjF" firstAttribute="centerX" secondItem="ebA-wJ-yHT" secondAttribute="centerX" id="Wgd-QN-xCn"/>
-                            <constraint firstItem="ebA-wJ-yHT" firstAttribute="top" secondItem="Tr2-DS-zjF" secondAttribute="bottom" constant="8" symbolic="YES" id="bNs-IP-oep"/>
-                            <constraint firstItem="bpU-Ge-Ii6" firstAttribute="centerX" secondItem="ebA-wJ-yHT" secondAttribute="centerX" id="hT0-PL-X23"/>
-                            <constraint firstItem="bpU-Ge-Ii6" firstAttribute="top" secondItem="ebA-wJ-yHT" secondAttribute="bottom" constant="8" symbolic="YES" id="mO4-gv-4ko"/>
-                            <constraint firstItem="ebA-wJ-yHT" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="265" id="ooe-wt-D6c"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="bpU-Ge-Ii6" secondAttribute="bottom" constant="305" id="Gas-Io-Ksg"/>
+                            <constraint firstItem="bpU-Ge-Ii6" firstAttribute="centerX" secondItem="Tr2-DS-zjF" secondAttribute="centerX" id="UrA-Hq-OxL"/>
+                            <constraint firstItem="bpU-Ge-Ii6" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="231" id="ol7-wi-w4G"/>
+                            <constraint firstItem="bpU-Ge-Ii6" firstAttribute="top" secondItem="Tr2-DS-zjF" secondAttribute="bottom" constant="8" symbolic="YES" id="v3N-3I-b2t"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -260,7 +251,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tsn-ah-tLx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="587" y="1779"/>
+            <point key="canvasLocation" x="2091" y="937"/>
         </scene>
         <!--HelpViewController-->
         <scene sceneID="GNI-hj-pOD">
@@ -284,7 +275,4 @@
     <resources>
         <image name="submitButton-green.png" width="547" height="547"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="cng-Fh-Oi8"/>
-    </inferredMetricsTieBreakers>
 </document>
