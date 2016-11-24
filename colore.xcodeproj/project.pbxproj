@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		8F1791651DCD164200307999 /* BoardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F1791641DCD164200307999 /* BoardModel.swift */; };
 		8FB340631DA04E2B00B470CB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FB340621DA04E2B00B470CB /* AppDelegate.swift */; };
-		8FB340651DA04E2B00B470CB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FB340641DA04E2B00B470CB /* ViewController.swift */; };
 		8FB340681DA04E2B00B470CB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8FB340661DA04E2B00B470CB /* Main.storyboard */; };
 		8FB3406A1DA04E2B00B470CB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8FB340691DA04E2B00B470CB /* Assets.xcassets */; };
 		8FB3406D1DA04E2B00B470CB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8FB3406B1DA04E2B00B470CB /* LaunchScreen.storyboard */; };
@@ -50,7 +49,6 @@
 		8F1791641DCD164200307999 /* BoardModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoardModel.swift; sourceTree = "<group>"; };
 		8FB3405F1DA04E2B00B470CB /* colore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = colore.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8FB340621DA04E2B00B470CB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		8FB340641DA04E2B00B470CB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		8FB340671DA04E2B00B470CB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8FB340691DA04E2B00B470CB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8FB3406C1DA04E2B00B470CB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -133,17 +131,15 @@
 		8FB340611DA04E2B00B470CB /* colore */ = {
 			isa = PBXGroup;
 			children = (
+				DAEE12A21DE68D5300A0666E /* StoryBoard */,
+				DAEE12A11DE68D3C00A0666E /* HomeScreen */,
+				DAEE12A01DE68CAF00A0666E /* GameOver */,
 				8F1791631DCD15AD00307999 /* BoardScreen */,
 				DA0F653F1DB1731500CC0CB6 /* images */,
 				DA0F653C1DB16A5D00CC0CB6 /* Modules */,
 				DAEC55701DA05BF2000C67B6 /* LevelScreen */,
 				8FB340621DA04E2B00B470CB /* AppDelegate.swift */,
-				8FB340641DA04E2B00B470CB /* ViewController.swift */,
-				8FB340661DA04E2B00B470CB /* Main.storyboard */,
-				E35B8B7B1DE3FE7F0034888D /* GameOverViewController.swift */,
-				8FB340941DA04EE000B470CB /* HomeViewController.swift */,
 				8FB340691DA04E2B00B470CB /* Assets.xcassets */,
-				8FB3406B1DA04E2B00B470CB /* LaunchScreen.storyboard */,
 				8FB3406E1DA04E2B00B470CB /* Info.plist */,
 			);
 			path = colore;
@@ -194,6 +190,31 @@
 				DAEC55731DA0C06A000C67B6 /* LevelModel.swift */,
 			);
 			name = LevelScreen;
+			sourceTree = "<group>";
+		};
+		DAEE12A01DE68CAF00A0666E /* GameOver */ = {
+			isa = PBXGroup;
+			children = (
+				E35B8B7B1DE3FE7F0034888D /* GameOverViewController.swift */,
+			);
+			name = GameOver;
+			sourceTree = "<group>";
+		};
+		DAEE12A11DE68D3C00A0666E /* HomeScreen */ = {
+			isa = PBXGroup;
+			children = (
+				8FB340941DA04EE000B470CB /* HomeViewController.swift */,
+			);
+			name = HomeScreen;
+			sourceTree = "<group>";
+		};
+		DAEE12A21DE68D5300A0666E /* StoryBoard */ = {
+			isa = PBXGroup;
+			children = (
+				8FB3406B1DA04E2B00B470CB /* LaunchScreen.storyboard */,
+				8FB340661DA04E2B00B470CB /* Main.storyboard */,
+			);
+			name = StoryBoard;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -330,7 +351,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8FB340651DA04E2B00B470CB /* ViewController.swift in Sources */,
 				DAEC55721DA05C1E000C67B6 /* LevelController.swift in Sources */,
 				DA2CDD541DCE5747009F60F6 /* BoardCell.swift in Sources */,
 				8FB340631DA04E2B00B470CB /* AppDelegate.swift in Sources */,
