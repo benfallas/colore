@@ -8,8 +8,5 @@ import UIKit
 class BoardCell: UICollectionViewCell {
 
     @IBOutlet weak var cellButton: UIButton!
-    
-    @IBAction func cellButtonClicked(sender: UIButton) {
-        print(sender.backgroundColor!)
-    }    
+
 }

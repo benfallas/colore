@@ -24,8 +24,16 @@ class BoardViewController: UICollectionViewController {
         for (color, occurence) in  state {
             print("\(color): \(occurence)")
         }
-        
+
     }
+    
+    @IBAction func onCellButtonClicked(sender: UIButton) {
+        
+        sender.backgroundColor = UIColor.whiteColor()
+        
+        performSegueWithIdentifier("gameOver", sender: sender);
+    }
+    
     
     override func numberOfSectionsInCollectionView(collectionView: UICollectionView?) -> Int {
         return 1
@@ -63,7 +71,6 @@ class BoardViewController: UICollectionViewController {
         
         return cell
     }
-
     
     func collectionView(collectionView: UICollectionView,
                                    layout collectionViewLayout: UICollectionViewLayout,
