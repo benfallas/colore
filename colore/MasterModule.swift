@@ -1,10 +1,9 @@
-//
-//  MasterModuel.swift
-//  colore
-//
-//  Created by Anita Garcia on 9/24/16.
-//  Copyright © 2016 sanc3823. All rights reserved.
-//
+/**
+ - MasterModule
+ - This module will keep tack of:
+ - Current points, current level, and highest score
+ -  in addition to the possible game colors.
+ **/
 import UIKit
 import Foundation
 

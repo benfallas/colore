@@ -1,10 +1,7 @@
-//
-//  AppDelegate.swift
-//  colore
-//
-//  Created by Anita Garcia on 10/1/16.
-//  Copyright © 2016 Anita Garcia. All rights reserved.
-//
+/**
+ - AppDelegate 
+ - Serves as a controller for the app
+*/
 
 import UIKit
 

@@ -1,10 +1,7 @@
-//
-//  SequenceModule.swift
-//  colore
-//
-//  Created by Anita Garcia on 10/1/16.
-//  Copyright © 2016 Anita Garcia. All rights reserved.
-//
+/**
+ - SequenceModule
+ - Keeps track of the current level's color sequence
+ **/
 import UIKit
 import Foundation
 
