@@ -6,8 +6,8 @@
 import UIKit
 
 class BoardViewController: UICollectionViewController {
-
     private var sequenceModule : SequenceModule!
+    private var masterModule : MasterModule!
     var boardModel = BoardModel()
     var buttonIndex : Int = 0;
     var board : [UIColor?] = []
@@ -16,24 +16,46 @@ class BoardViewController: UICollectionViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         sequenceModule = SequenceModule.getCurrentModule()
-        // Initialize board
-        boardModel.initBoard()
+        masterModule = MasterModule.getCurrentModule()
         board = boardModel.getBoard()
         state = boardModel.getState()
-        print (">><<")
-        for (color, occurence) in  state {
-            print("\(color): \(occurence)")
-        }
-
     }
     
     @IBAction func onCellButtonClicked(sender: UIButton) {
-        
-        sender.backgroundColor = UIColor.whiteColor()
-        
-        performSegueWithIdentifier("gameOver", sender: sender);
+        if(sender.backgroundColor != UIColor.whiteColor()){
+            onCellClick(sender.backgroundColor!)
+            sender.backgroundColor = UIColor.whiteColor()
+        }
     }
     
+    /**
+    - Manages game logic upong each cell click
+    */
+    func onCellClick(color: UIColor){
+        sequenceModule = SequenceModule.getCurrentModule()
+        
+        if(color == sequenceModule.peakHighestInSequence()){
+            boardModel.updateStateBoard(color);
+            boardModel.increasePoints();
+            if(boardModel.isLevelOver()){
+                if(boardModel.isGameOver()){
+                   gameOver()
+                }else{
+                    masterModule.currentLevel += 1
+                    performSegueWithIdentifier("levelUp", sender: self);
+                }
+            }
+        }else{
+            gameOver();
+        }
+    }
+    
+    /** 
+    - Segways into the game over screen
+    */
+    func gameOver(){
+        performSegueWithIdentifier("gameOver", sender: self);
+    }
     
     override func numberOfSectionsInCollectionView(collectionView: UICollectionView?) -> Int {
         return 1
@@ -65,8 +87,6 @@ class BoardViewController: UICollectionViewController {
         
         cell.cellButton?.backgroundColor = board[buttonIndex]
         cell.cellButton?.layer.borderColor = UIColor.blackColor().CGColor
-        cell.cellButton?.layer.borderWidth = 1
-        
         buttonIndex += 1;
         
         return cell

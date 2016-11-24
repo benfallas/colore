@@ -25,7 +25,7 @@ class GameOverViewController: UIViewController {
     }
     
     private func displayScore() {
-        scoreLabel.text = scoreLabel.text! + " \(MasterModule.getCurrentModule().highestScore)"
+        scoreLabel.text = scoreLabel.text! + " \(MasterModule.getCurrentModule().currentPoints)"
     }
     
     private func displayHighestScore() {

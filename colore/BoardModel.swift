@@ -34,6 +34,7 @@ class BoardModel{
         SEQUENCE_SIZE = sequenceModule.size()
         utilityModule = UtilityModule.getCurrentModule()
         board = [UIColor?](count: BOARD_SIZE, repeatedValue: nil)
+        initBoard()
     }
     
     func getBoardSize() -> Int{
@@ -81,4 +82,47 @@ class BoardModel{
         }
     }
     
+    /** 
+     - Updated state of board. It decrease the number of occurences
+     - or remove highest in sequence when there are no more 
+     - occurences of that color on the board.
+    */
+    func updateStateBoard(color: UIColor){
+        state[color] = state[color]! - 1;
+        if(state[color] == 0){
+            state[color] = nil
+            sequenceModule.removeHighestInSequence()
+        }
+    }
+    
+    /**
+    - Increases points upon successful click
+    */
+    func increasePoints(){
+        masterModule.currentPoints += 1;
+    }
+    
+    /**
+    - Checks to see if level is complete
+    */
+    func isLevelOver() -> Bool{
+        if(sequenceModule.getSize() == 0){
+            return true;
+        }
+        return false;
+    }
+    
+    /**
+    - Check to see if game is over
+    */
+    func isGameOver() -> Bool {
+        return masterModule.currentLevel == 7;
+    }
+    
+    /**
+    - Increases current level
+    */
+    func increaseLevel(){
+        masterModule.currentLevel += 1;
+    }
 }
