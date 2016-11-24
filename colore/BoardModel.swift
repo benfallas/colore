@@ -106,7 +106,7 @@ class BoardModel{
     - Checks to see if level is complete
     */
     func isLevelOver() -> Bool{
-        if(sequenceModule.getSize() == 0){
+        if(sequenceModule.size() == 0){
             return true;
         }
         return false;
@@ -124,5 +124,13 @@ class BoardModel{
     */
     func increaseLevel(){
         masterModule.currentLevel += 1;
+    }
+    
+    /**
+     - Clears state and board
+     */
+    func clear(){
+        board.removeAll()
+        state.removeAll()
     }
 }

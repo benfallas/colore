@@ -12,6 +12,7 @@ class BoardViewController: UICollectionViewController {
     var buttonIndex : Int = 0;
     var board : [UIColor?] = []
     var state = [UIColor: Int]()
+    var BORDER_WIDTH : CGFloat = 2
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -54,7 +55,28 @@ class BoardViewController: UICollectionViewController {
     - Segways into the game over screen
     */
     func gameOver(){
+        updateHighScore(masterModule.currentPoints)
         performSegueWithIdentifier("gameOver", sender: self);
+         reset()
+    }
+    
+    /**
+     - Resets game
+     */
+    func reset(){
+        masterModule.currentLevel = 1
+        masterModule.currentPoints = 0
+        boardModel.clear()
+        sequenceModule.clear()
+    }
+    
+    /**
+     - Updates high score
+     */
+    func updateHighScore(currentScore : Int){
+        if(currentScore > masterModule.highestScore){
+            masterModule.highestScore = currentScore
+        }
     }
     
     override func numberOfSectionsInCollectionView(collectionView: UICollectionView?) -> Int {
@@ -87,6 +109,7 @@ class BoardViewController: UICollectionViewController {
         
         cell.cellButton?.backgroundColor = board[buttonIndex]
         cell.cellButton?.layer.borderColor = UIColor.blackColor().CGColor
+        cell.cellButton?.layer.borderWidth = BORDER_WIDTH
         buttonIndex += 1;
         
         return cell

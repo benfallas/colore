@@ -8,16 +8,18 @@ import UIKit
 
 class GameOverViewController: UIViewController {
 
-    
+    private var masterModule : MasterModule!
     @IBOutlet weak var lastLevelReachedLabel: UILabel!
     @IBOutlet weak var scoreLabel: UILabel!
     @IBOutlet weak var highestScoreLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        masterModule = MasterModule.getCurrentModule()
         displayLastLevelReached()
         displayScore()
         displayHighestScore()
+        
     }
     
     private func displayLastLevelReached() {
@@ -25,10 +27,10 @@ class GameOverViewController: UIViewController {
     }
     
     private func displayScore() {
-        scoreLabel.text = scoreLabel.text! + " \(MasterModule.getCurrentModule().currentPoints)"
+        scoreLabel.text = scoreLabel.text! + " \(masterModule.currentPoints)"
     }
     
     private func displayHighestScore() {
-        highestScoreLabel.text = highestScoreLabel.text! + " \(MasterModule.getCurrentModule().highestScore)"
+        highestScoreLabel.text = highestScoreLabel.text! + " \(masterModule.highestScore)"
     }
 }

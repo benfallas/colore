@@ -42,7 +42,7 @@ class MasterModule{
             return _currentPoints
         }
         set(updatePoints){
-            if(updatePoints >= 1){
+            if(updatePoints >= 0){
                 _currentPoints = updatePoints
             }
         }
