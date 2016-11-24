@@ -25,6 +25,7 @@
 		DAEC55721DA05C1E000C67B6 /* LevelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEC55711DA05C1E000C67B6 /* LevelController.swift */; };
 		DAEC55741DA0C06A000C67B6 /* LevelModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEC55731DA0C06A000C67B6 /* LevelModel.swift */; };
 		E35B8B7C1DE3FE7F0034888D /* GameOverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E35B8B7B1DE3FE7F0034888D /* GameOverViewController.swift */; };
+		E39E04911DE6865700012C95 /* home.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = E39E04901DE6865700012C95 /* home.jpeg */; };
 		E3D95B8F1DE5531E0092978E /* submitButton-green.png in Resources */ = {isa = PBXBuildFile; fileRef = E3D95B8E1DE5531E0092978E /* submitButton-green.png */; };
 /* End PBXBuildFile section */
 
@@ -70,6 +71,7 @@
 		DAEC55711DA05C1E000C67B6 /* LevelController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LevelController.swift; sourceTree = "<group>"; };
 		DAEC55731DA0C06A000C67B6 /* LevelModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LevelModel.swift; sourceTree = "<group>"; };
 		E35B8B7B1DE3FE7F0034888D /* GameOverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameOverViewController.swift; sourceTree = "<group>"; };
+		E39E04901DE6865700012C95 /* home.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = home.jpeg; sourceTree = "<group>"; };
 		E3D95B8E1DE5531E0092978E /* submitButton-green.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "submitButton-green.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -179,6 +181,7 @@
 				8FB340921DA04E8E00B470CB /* splash_icon.png */,
 				8FB340901DA04E8400B470CB /* app_icon.png */,
 				E3D95B8E1DE5531E0092978E /* submitButton-green.png */,
+				E39E04901DE6865700012C95 /* home.jpeg */,
 			);
 			name = images;
 			sourceTree = "<group>";
@@ -321,6 +324,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E39E04911DE6865700012C95 /* home.jpeg in Resources */,
 				8FB340911DA04E8400B470CB /* app_icon.png in Resources */,
 				8FB3406D1DA04E2B00B470CB /* LaunchScreen.storyboard in Resources */,
 				8FB3406A1DA04E2B00B470CB /* Assets.xcassets in Resources */,
