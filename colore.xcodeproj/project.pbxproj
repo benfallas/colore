@@ -178,12 +178,20 @@
 		DA0F653F1DB1731500CC0CB6 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				DAB879751DEA311300E659E6 /* instructions */,
 				8FB340921DA04E8E00B470CB /* splash_icon.png */,
 				8FB340901DA04E8400B470CB /* app_icon.png */,
 				E3D95B8E1DE5531E0092978E /* submitButton-green.png */,
 				E39E04901DE6865700012C95 /* home.jpeg */,
 			);
 			name = images;
+			sourceTree = "<group>";
+		};
+		DAB879751DEA311300E659E6 /* instructions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = instructions;
 			sourceTree = "<group>";
 		};
 		DAEC55701DA05BF2000C67B6 /* LevelScreen */ = {
