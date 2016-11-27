@@ -21,14 +21,22 @@ class LevelController: UIViewController {
         
         super.viewDidLoad()
         
-        masterModule = MasterModule.getCurrentModule()
-        let modelViewController = LevelModel()
-        
-        levelLabel.text = "Level: \(masterModule.currentLevel)"
-        
-        randomlySelectedColors = modelViewController.getRandomlySelectedColors()
-        
-        displaySequenceColors();
+        /**
+         * Grand Central Dispatch that takes care of multithreading.
+         * Other thread will handle populating level sequence list. 
+         */
+        let priority = DISPATCH_QUEUE_PRIORITY_DEFAULT
+        dispatch_async(dispatch_get_global_queue(priority, 0)) {
+            self.masterModule = MasterModule.getCurrentModule()
+            let modelViewController = LevelModel()
+            
+            self.levelLabel.text = "Level: \(self.masterModule.currentLevel)"
+            
+            self.randomlySelectedColors = modelViewController.getRandomlySelectedColors()
+            dispatch_async(dispatch_get_main_queue()) {
+                self.displaySequenceColors();
+            }
+        }
     }
     
     

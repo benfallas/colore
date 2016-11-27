@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>last_level_reached</key>
+	<string>Last Level Reached: </string>
+	<key>current_score</key>
+	<string>Current Score: </string>
+	<key>highest_score</key>
+	<string>Highest Score: </string>
+	<key>level</key>
+	<string>Level:</string>
+	<key>play_new_game_button</key>
+	<string>Play New Game</string>
+	<key>help_button</key>
+	<string>Help</string>
+</dict>
+</plist>
