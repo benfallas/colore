@@ -68,7 +68,7 @@
                                 <rect key="frame" x="285" y="525" width="30" height="30"/>
                                 <state key="normal" title="Play"/>
                                 <connections>
-                                    <segue destination="vrG-rT-PU9" kind="show" identifier="PlayButton" id="Van-Sr-F6x"/>
+                                    <action selector="onPlayButtonClicked" destination="r9t-rp-pZB" eventType="touchUpInside" id="8EC-Jg-xUn"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Level" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qAq-yX-16b">
@@ -77,19 +77,31 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qWu-Mn-KUX">
+                                <rect key="frame" x="282" y="494" width="42" height="33"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="lDA-Px-sSd" firstAttribute="top" secondItem="qWu-Mn-KUX" secondAttribute="bottom" constant="73" id="E8D-K2-x7j"/>
+                            <constraint firstItem="qWu-Mn-KUX" firstAttribute="centerY" secondItem="REG-Ce-IK2" secondAttribute="centerY" constant="210.5" id="Gys-rG-ZqP"/>
+                            <constraint firstItem="qWu-Mn-KUX" firstAttribute="leading" secondItem="5DS-qk-1hU" secondAttribute="leading" constant="-3" id="MmJ-We-d9I"/>
                             <constraint firstItem="lDA-Px-sSd" firstAttribute="top" secondItem="5DS-qk-1hU" secondAttribute="bottom" constant="45" id="Vy2-sv-S0d"/>
                             <constraint firstItem="5DS-qk-1hU" firstAttribute="centerX" secondItem="REG-Ce-IK2" secondAttribute="centerX" id="bhd-Z6-z1k"/>
                             <constraint firstItem="qAq-yX-16b" firstAttribute="centerX" secondItem="5DS-qk-1hU" secondAttribute="centerX" id="iwq-eq-gM7"/>
                             <constraint firstItem="5DS-qk-1hU" firstAttribute="width" secondItem="REG-Ce-IK2" secondAttribute="height" multiplier="1:20" id="jc9-yz-Fmf"/>
                             <constraint firstItem="qAq-yX-16b" firstAttribute="top" secondItem="ykO-Gg-wUW" secondAttribute="bottom" constant="8" symbolic="YES" id="nZl-dJ-35v"/>
                             <constraint firstItem="qAq-yX-16b" firstAttribute="width" secondItem="REG-Ce-IK2" secondAttribute="height" multiplier="27:100" id="vEf-tg-e8E"/>
+                            <constraint firstItem="qWu-Mn-KUX" firstAttribute="centerY" secondItem="REG-Ce-IK2" secondAttribute="centerY" constant="210.5" id="y7b-ds-C1c"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="levelLabel" destination="qAq-yX-16b" id="KZb-Mw-l8U"/>
+                        <outlet property="mTimer" destination="qWu-Mn-KUX" id="DhU-1e-tjl"/>
+                        <segue destination="vrG-rT-PU9" kind="presentation" identifier="PlayButton" id="4aB-PJ-31b"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="imC-1E-c9q" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -311,7 +323,7 @@
         <image name="submitButton-green.png" width="547" height="547"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="fGn-7Z-9jz"/>
         <segue reference="wRZ-SO-ng3"/>
+        <segue reference="B8O-6f-Lhf"/>
     </inferredMetricsTieBreakers>
 </document>

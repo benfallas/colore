@@ -14,13 +14,15 @@ class LevelController: UIViewController {
     private var randomlySelectedColors : [UIColor] = []
     private var levelModelViewController = LevelController.self
     private var masterModule : MasterModule!
+    var totalSecondsCountDown = 3 // 60 seconds
+    var timer : NSTimer!
     
     @IBOutlet weak var levelLabel: UILabel!
+    @IBOutlet weak var mTimer: UILabel!
     
     override func viewDidLoad() {
-        
         super.viewDidLoad()
-        
+
         /**
          * Grand Central Dispatch that takes care of multithreading.
          * Other thread will handle populating level sequence list. 
@@ -37,6 +39,8 @@ class LevelController: UIViewController {
                 self.displaySequenceColors();
             }
         }
+        
+        self.startCountDownTimer()
     }
     
     
@@ -69,6 +73,57 @@ class LevelController: UIViewController {
             
             view.addSubview(button)
             buttonTop = buttonTop + CGFloat(buttonHeight + 5)
+        }
+    }
+    
+    /**
+    * Updates timer on the view.
+    */
+    func updateTimer() {
+        
+        if self.totalSecondsCountDown > 0 {
+            self.totalSecondsCountDown = self.totalSecondsCountDown - 1
+            mTimer.text = String(self.totalSecondsCountDown)
+        } else {
+            self.stopCountDownTimer();
+            mTimer.text = String(self.totalSecondsCountDown)
+            performSegueWithIdentifier("PlayButton", sender: self)
+        }
+    }
+    
+    /**
+    * When button is clicked. 
+    * Stop timer. 
+    */
+    @IBAction func onPlayButtonClicked() {
+        self.totalSecondsCountDown = 0
+        updateTimer()
+    }
+    
+    /**
+    * Starts timer count down.
+    */
+    func startCountDownTimer() {
+        
+        if self.timer != nil {
+            self.timer.invalidate()
+            self.timer = nil
+        }
+        
+        if self.totalSecondsCountDown > 0 {
+            self.timer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: #selector(LevelController.updateTimer), userInfo: nil, repeats: true)
+            NSRunLoop.currentRunLoop().addTimer(self.timer, forMode: NSRunLoopCommonModes)
+            self.timer.fire()
+        }
+    }
+    
+    /**
+    * Stops timer count down.
+    */
+    func stopCountDownTimer() {
+        if self.timer != nil {
+            self.timer.invalidate()
+            self.timer = nil
         }
     }
 }
