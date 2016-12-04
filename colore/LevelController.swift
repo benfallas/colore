@@ -14,14 +14,19 @@ class LevelController: UIViewController {
     private var randomlySelectedColors : [UIColor] = []
     private var levelModelViewController = LevelController.self
     private var masterModule : MasterModule!
-    var totalSecondsCountDown = 3 // 60 seconds
+    var totalSecondsCountDown = 0
     var timer : NSTimer!
+    var BASE_TIME = 5
+    var CURRENT_LEVEL = 0
     
     @IBOutlet weak var levelLabel: UILabel!
     @IBOutlet weak var mTimer: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.masterModule = MasterModule.getCurrentModule()
+        CURRENT_LEVEL = masterModule.currentLevel
+        setTimer()
 
         /**
          * Grand Central Dispatch that takes care of multithreading.
@@ -29,10 +34,9 @@ class LevelController: UIViewController {
          */
         let priority = DISPATCH_QUEUE_PRIORITY_DEFAULT
         dispatch_async(dispatch_get_global_queue(priority, 0)) {
-            self.masterModule = MasterModule.getCurrentModule()
             let modelViewController = LevelModel()
             
-            self.levelLabel.text = "Level: \(self.masterModule.currentLevel)"
+            self.levelLabel.text = "Level: \(self.CURRENT_LEVEL)"
             
             self.randomlySelectedColors = modelViewController.getRandomlySelectedColors()
             dispatch_async(dispatch_get_main_queue()) {
@@ -43,6 +47,17 @@ class LevelController: UIViewController {
         self.startCountDownTimer()
     }
     
+    /**
+     * Sets the total time to count down.
+     */
+    func setTimer(){
+        if(CURRENT_LEVEL <= 2){
+            totalSecondsCountDown = BASE_TIME + (CURRENT_LEVEL - 1)
+        }
+        else{
+            totalSecondsCountDown = BASE_TIME + (CURRENT_LEVEL - 1) + Int(log2(Double(CURRENT_LEVEL - 1))) + Int(log2(Double(CURRENT_LEVEL - 2)));
+        }
+    }
     
     /**
         Display the colors in randomlySelectedColors on Level Screen
