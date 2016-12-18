@@ -8,6 +8,7 @@ import UIKit
 class BoardViewController: UICollectionViewController {
     private var sequenceModule : SequenceModule!
     private var masterModule : MasterModule!
+    private var isWinner: Bool!
     var boardModel = BoardModel()
     var buttonIndex : Int = 0;
     var board : [UIColor?] = []
@@ -40,21 +41,31 @@ class BoardViewController: UICollectionViewController {
             boardModel.increasePoints();
             if(boardModel.isLevelOver()){
                 if(boardModel.isGameOver()){
-                   gameOver()
+                   gameOver(true)
                 }else{
                     masterModule.currentLevel += 1
                     performSegueWithIdentifier("levelUp", sender: self);
                 }
             }
         }else{
-            gameOver();
+            gameOver(false);
+        }
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if (segue.identifier == "gameOver") {
+            let svc = segue.destinationViewController as! GameOverViewController;
+            
+            svc.isWinner = self.isWinner
+            
         }
     }
     
     /** 
     - Segways into the game over screen
     */
-    func gameOver(){
+    func gameOver(isWinner: Bool){
+        self.isWinner = isWinner
         updateHighScore(masterModule.currentPoints)
         performSegueWithIdentifier("gameOver", sender: self);
          reset()

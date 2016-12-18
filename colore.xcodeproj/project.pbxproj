@@ -24,6 +24,8 @@
 		DA2CDD561DCE57A4009F60F6 /* BoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2CDD551DCE57A4009F60F6 /* BoardViewController.swift */; };
 		DAEC55721DA05C1E000C67B6 /* LevelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEC55711DA05C1E000C67B6 /* LevelController.swift */; };
 		DAEC55741DA0C06A000C67B6 /* LevelModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEC55731DA0C06A000C67B6 /* LevelModel.swift */; };
+		E3118E6E1DF5306200C67ED2 /* checkmark_image.png in Resources */ = {isa = PBXBuildFile; fileRef = E3118E6D1DF5306200C67ED2 /* checkmark_image.png */; };
+		E3118E701DF530C200C67ED2 /* x_image.png in Resources */ = {isa = PBXBuildFile; fileRef = E3118E6F1DF530C200C67ED2 /* x_image.png */; };
 		E35B8B7C1DE3FE7F0034888D /* GameOverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E35B8B7B1DE3FE7F0034888D /* GameOverViewController.swift */; };
 		E39E04911DE6865700012C95 /* home.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = E39E04901DE6865700012C95 /* home.jpeg */; };
 		E3D95B8F1DE5531E0092978E /* submitButton-green.png in Resources */ = {isa = PBXBuildFile; fileRef = E3D95B8E1DE5531E0092978E /* submitButton-green.png */; };
@@ -70,6 +72,8 @@
 		DA2CDD551DCE57A4009F60F6 /* BoardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoardViewController.swift; sourceTree = "<group>"; };
 		DAEC55711DA05C1E000C67B6 /* LevelController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LevelController.swift; sourceTree = "<group>"; };
 		DAEC55731DA0C06A000C67B6 /* LevelModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LevelModel.swift; sourceTree = "<group>"; };
+		E3118E6D1DF5306200C67ED2 /* checkmark_image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = checkmark_image.png; sourceTree = "<group>"; };
+		E3118E6F1DF530C200C67ED2 /* x_image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = x_image.png; sourceTree = "<group>"; };
 		E35B8B7B1DE3FE7F0034888D /* GameOverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameOverViewController.swift; sourceTree = "<group>"; };
 		E39E04901DE6865700012C95 /* home.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = home.jpeg; sourceTree = "<group>"; };
 		E3D95B8E1DE5531E0092978E /* submitButton-green.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "submitButton-green.png"; sourceTree = "<group>"; };
@@ -178,20 +182,14 @@
 		DA0F653F1DB1731500CC0CB6 /* images */ = {
 			isa = PBXGroup;
 			children = (
-				DAB879751DEA311300E659E6 /* instructions */,
 				8FB340921DA04E8E00B470CB /* splash_icon.png */,
 				8FB340901DA04E8400B470CB /* app_icon.png */,
+				E3118E6D1DF5306200C67ED2 /* checkmark_image.png */,
+				E3118E6F1DF530C200C67ED2 /* x_image.png */,
 				E3D95B8E1DE5531E0092978E /* submitButton-green.png */,
 				E39E04901DE6865700012C95 /* home.jpeg */,
 			);
 			name = images;
-			sourceTree = "<group>";
-		};
-		DAB879751DEA311300E659E6 /* instructions */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = instructions;
 			sourceTree = "<group>";
 		};
 		DAEC55701DA05BF2000C67B6 /* LevelScreen */ = {
@@ -333,9 +331,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				E39E04911DE6865700012C95 /* home.jpeg in Resources */,
+				E3118E6E1DF5306200C67ED2 /* checkmark_image.png in Resources */,
 				8FB340911DA04E8400B470CB /* app_icon.png in Resources */,
 				8FB3406D1DA04E2B00B470CB /* LaunchScreen.storyboard in Resources */,
 				8FB3406A1DA04E2B00B470CB /* Assets.xcassets in Resources */,
+				E3118E701DF530C200C67ED2 /* x_image.png in Resources */,
 				8FB340681DA04E2B00B470CB /* Main.storyboard in Resources */,
 				8FB340931DA04E8E00B470CB /* splash_icon.png in Resources */,
 				E3D95B8F1DE5531E0092978E /* submitButton-green.png in Resources */,

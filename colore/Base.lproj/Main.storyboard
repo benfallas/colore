@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G1108" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -274,6 +274,7 @@
                     </view>
                     <connections>
                         <outlet property="highestScoreLabel" destination="yG1-3A-1tj" id="7xh-iG-Y30"/>
+                        <outlet property="imageView" destination="ekf-En-ZP0" id="1mu-Qb-VSb"/>
                         <outlet property="lastLevelReachedLabel" destination="kUu-QJ-gzF" id="cP9-1F-rUy"/>
                         <outlet property="scoreLabel" destination="AYs-UT-hBc" id="mfn-N8-S8R"/>
                     </connections>

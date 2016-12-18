@@ -9,12 +9,22 @@ import UIKit
 class GameOverViewController: UIViewController {
 
     private var masterModule : MasterModule!
+    var isWinner: Bool!
     @IBOutlet weak var lastLevelReachedLabel: UILabel!
     @IBOutlet weak var scoreLabel: UILabel!
     @IBOutlet weak var highestScoreLabel: UILabel!
+    @IBOutlet weak var imageView: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        if((isWinner) != nil) {
+            let boolean: Bool = isWinner
+            if(boolean) {
+                imageView.image = UIImage(named: "checkmark_image.png")
+            } else {
+                imageView.image = UIImage(named: "x_image.png")
+            }
+        }
         masterModule = MasterModule.getCurrentModule()
         displayLastLevelReached()
         displayScore()
