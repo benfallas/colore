@@ -17,18 +17,29 @@ class GameOverViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         if((isWinner) != nil) {
             let boolean: Bool = isWinner
             if(boolean) {
-                imageView.image = UIImage(named: "checkmark_image.png")
+                imageView.image = UIImage(named: "win")
             } else {
-                imageView.image = UIImage(named: "x_image.png")
+                imageView.image = UIImage(named: "loose")
             }
         }
         masterModule = MasterModule.getCurrentModule()
         displayLastLevelReached()
         displayScore()
         displayHighestScore()
+        
+        // Set background
+        UIGraphicsBeginImageContext(self.view.frame.size)
+        UIImage(named: "colore_background")?.drawInRect(self.view.bounds)
+        
+        let image: UIImage = UIGraphicsGetImageFromCurrentImageContext()
+        
+        UIGraphicsEndImageContext()
+        
+        self.view.backgroundColor = UIColor(patternImage: image)
         
     }
     

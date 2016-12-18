@@ -11,6 +11,16 @@ class HomeViewController: UIViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // Set background
+        UIGraphicsBeginImageContext(self.view.frame.size)
+        UIImage(named: "colore_background")?.drawInRect(self.view.bounds)
+        
+        let image: UIImage = UIGraphicsGetImageFromCurrentImageContext()
+        
+        UIGraphicsEndImageContext()
+        
+        self.view.backgroundColor = UIColor(patternImage: image)
     }
     
     /* 
