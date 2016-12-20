@@ -10,7 +10,7 @@ class UtilityModule{
     private static let currentModule = UtilityModule()
     
     static func getRandomNumber(range:Int) -> Int{
-        return Int(arc4random()) % range
+        return Int(arc4random_uniform(UInt32(range)))
     }
     static func getRandomNumber() -> Int{
        return Int(random())
