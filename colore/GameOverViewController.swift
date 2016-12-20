@@ -26,6 +26,7 @@ class GameOverViewController: UIViewController {
     }
     
     private func displayIsWinnerImage() {
+        imageView.contentMode = .ScaleAspectFit
         if((isWinner) != nil) {
             let boolean: Bool = isWinner
             if(boolean) {
@@ -33,6 +34,7 @@ class GameOverViewController: UIViewController {
             } else {
                 imageView.image = UIImage(named: "loose")
             }
+            UIGraphicsBeginImageContextWithOptions((imageView.image?.size)!, true, 0.0)
         }
     }
     

@@ -100,7 +100,7 @@ class HomeViewController: UIViewController{
     
     private func getBoardInstructions() -> String {
         let title = "Board Screen: \n\n"
-        let body = "The Board Screen consists of a 3X3 board full of colors!! The colors are mixture of all the colors listed in the Level screen!! The players goal is to click on the colors in the order that they were displayed! Given the previous example with the list 'Blue, Green, Red' the goal would be to click all Blue buttons, then proceed with all Green button and finally all Red buttons!\n\n"
+        let body = "The Board Screen consists of a 3X3 board full of colors!! The colors are a mixture of all the colors listed in the Level screen. The players goal is to click on the colors in the order that they were displayed. Given the previous example with the list 'Blue, Green, Red' the goal would be to click all Blue buttons, then proceed with all Green button and finally all Red buttons.\n\n"
         
         let boardInstructions = title + body;
         
