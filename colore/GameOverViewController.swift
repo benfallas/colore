@@ -1,4 +1,3 @@
-
 /*
  * GameOverViewController
  * Controller that displays the end game showing the high score and an image
@@ -10,6 +9,7 @@ class GameOverViewController: UIViewController {
 
     private var masterModule : MasterModule!
     var isWinner: Bool!
+    
     @IBOutlet weak var lastLevelReachedLabel: UILabel!
     @IBOutlet weak var scoreLabel: UILabel!
     @IBOutlet weak var highestScoreLabel: UILabel!
@@ -17,7 +17,15 @@ class GameOverViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        masterModule = MasterModule.getCurrentModule()
+        displayIsWinnerImage()
+        displayLastLevelReached()
+        displayScore()
+        displayHighestScore()
+        setBackground()
+    }
+    
+    private func displayIsWinnerImage() {
         if((isWinner) != nil) {
             let boolean: Bool = isWinner
             if(boolean) {
@@ -26,21 +34,14 @@ class GameOverViewController: UIViewController {
                 imageView.image = UIImage(named: "loose")
             }
         }
-        masterModule = MasterModule.getCurrentModule()
-        displayLastLevelReached()
-        displayScore()
-        displayHighestScore()
-        
-        // Set background
+    }
+    
+    private func setBackground() {
         UIGraphicsBeginImageContext(self.view.frame.size)
         UIImage(named: "colore_background")?.drawInRect(self.view.bounds)
-        
         let image: UIImage = UIGraphicsGetImageFromCurrentImageContext()
-        
         UIGraphicsEndImageContext()
-        
         self.view.backgroundColor = UIColor(patternImage: image)
-        
     }
     
     private func displayLastLevelReached() {

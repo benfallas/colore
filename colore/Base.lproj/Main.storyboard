@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G1108" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -21,6 +21,7 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tr2-DS-zjF">
                                 <rect key="frame" x="241" y="266" width="118" height="30"/>
+                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="15"/>
                                 <state key="normal" title="Play New Game"/>
                                 <connections>
                                     <segue destination="r9t-rp-pZB" kind="showDetail" identifier="Play New Game" id="fGn-7Z-9jz"/>
@@ -31,22 +32,37 @@
                                 <constraints>
                                     <constraint firstAttribute="width" constant="118" id="oGF-Cg-Oew"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="15"/>
                                 <state key="normal" title="Help"/>
                                 <connections>
                                     <action selector="onHelpButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8QI-ik-NEF"/>
                                     <segue destination="3jw-IW-qSB" kind="showDetail" id="juZ-sh-GgB"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="c o l o r e" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NbN-vg-q6S">
+                                <rect key="frame" x="96" y="237" width="408" height="21"/>
+                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="NbN-vg-q6S" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="76" id="BcJ-C2-WIP"/>
                             <constraint firstItem="bpU-Ge-Ii6" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="19" id="Hrc-dk-WhC"/>
                             <constraint firstItem="Tr2-DS-zjF" firstAttribute="trailing" secondItem="bpU-Ge-Ii6" secondAttribute="trailing" id="Quk-Gh-Uun"/>
+                            <constraint firstItem="Tr2-DS-zjF" firstAttribute="top" secondItem="NbN-vg-q6S" secondAttribute="bottom" constant="8" id="b7a-8g-pua"/>
                             <constraint firstItem="bpU-Ge-Ii6" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="cc5-dz-H8N"/>
                             <constraint firstItem="Tr2-DS-zjF" firstAttribute="leading" secondItem="bpU-Ge-Ii6" secondAttribute="leading" id="hao-4O-afJ"/>
                             <constraint firstItem="bpU-Ge-Ii6" firstAttribute="top" secondItem="Tr2-DS-zjF" secondAttribute="bottom" constant="8" symbolic="YES" id="huZ-Y5-jt8"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="NbN-vg-q6S" secondAttribute="trailing" constant="76" id="jAT-ZZ-7Ah"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="helpButton" destination="bpU-Ge-Ii6" id="hmk-c4-fo3"/>
+                        <outlet property="homeLabel" destination="NbN-vg-q6S" id="Dzn-XU-ObK"/>
+                        <outlet property="playButton" destination="Tr2-DS-zjF" id="d62-lO-0wY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -64,43 +80,43 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5DS-qk-1hU">
-                                <rect key="frame" x="285" y="525" width="30" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5DS-qk-1hU">
+                                <rect key="frame" x="505" y="528" width="75" height="30"/>
+                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="15"/>
                                 <state key="normal" title="Play"/>
                                 <connections>
                                     <action selector="onPlayButtonClicked" destination="r9t-rp-pZB" eventType="touchUpInside" id="8EC-Jg-xUn"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Level" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qAq-yX-16b">
-                                <rect key="frame" x="219" y="28" width="162" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Level" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qAq-yX-16b">
+                                <rect key="frame" x="20" y="537" width="162" height="21"/>
+                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qWu-Mn-KUX">
-                                <rect key="frame" x="282" y="494" width="42" height="33"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qWu-Mn-KUX">
+                                <rect key="frame" x="505" y="487" width="75" height="33"/>
+                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="lDA-Px-sSd" firstAttribute="top" secondItem="qWu-Mn-KUX" secondAttribute="bottom" constant="73" id="E8D-K2-x7j"/>
-                            <constraint firstItem="qWu-Mn-KUX" firstAttribute="centerY" secondItem="REG-Ce-IK2" secondAttribute="centerY" constant="210.5" id="Gys-rG-ZqP"/>
-                            <constraint firstItem="qWu-Mn-KUX" firstAttribute="leading" secondItem="5DS-qk-1hU" secondAttribute="leading" constant="-3" id="MmJ-We-d9I"/>
-                            <constraint firstItem="lDA-Px-sSd" firstAttribute="top" secondItem="5DS-qk-1hU" secondAttribute="bottom" constant="45" id="Vy2-sv-S0d"/>
-                            <constraint firstItem="5DS-qk-1hU" firstAttribute="centerX" secondItem="REG-Ce-IK2" secondAttribute="centerX" id="bhd-Z6-z1k"/>
-                            <constraint firstItem="qAq-yX-16b" firstAttribute="centerX" secondItem="5DS-qk-1hU" secondAttribute="centerX" id="iwq-eq-gM7"/>
-                            <constraint firstItem="5DS-qk-1hU" firstAttribute="width" secondItem="REG-Ce-IK2" secondAttribute="height" multiplier="1:20" id="jc9-yz-Fmf"/>
-                            <constraint firstItem="qAq-yX-16b" firstAttribute="top" secondItem="ykO-Gg-wUW" secondAttribute="bottom" constant="8" symbolic="YES" id="nZl-dJ-35v"/>
+                            <constraint firstItem="lDA-Px-sSd" firstAttribute="top" secondItem="qAq-yX-16b" secondAttribute="bottom" constant="42" id="DSk-ps-1Mz"/>
+                            <constraint firstItem="lDA-Px-sSd" firstAttribute="top" secondItem="5DS-qk-1hU" secondAttribute="bottom" constant="42" id="KbX-HK-R86"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="5DS-qk-1hU" secondAttribute="trailing" id="Xeh-CN-pnL"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="qAq-yX-16b" secondAttribute="leading" id="dQz-qo-3ao"/>
+                            <constraint firstItem="5DS-qk-1hU" firstAttribute="top" secondItem="qWu-Mn-KUX" secondAttribute="bottom" constant="8" id="fU8-Ff-PDI"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="qWu-Mn-KUX" secondAttribute="trailing" id="ixF-Dl-lbE"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="5DS-qk-1hU" secondAttribute="trailing" id="mLt-Uh-wvk"/>
                             <constraint firstItem="qAq-yX-16b" firstAttribute="width" secondItem="REG-Ce-IK2" secondAttribute="height" multiplier="27:100" id="vEf-tg-e8E"/>
-                            <constraint firstItem="qWu-Mn-KUX" firstAttribute="centerY" secondItem="REG-Ce-IK2" secondAttribute="centerY" constant="210.5" id="y7b-ds-C1c"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="levelLabel" destination="qAq-yX-16b" id="KZb-Mw-l8U"/>
                         <outlet property="mTimer" destination="qWu-Mn-KUX" id="DhU-1e-tjl"/>
+                        <outlet property="playButton" destination="5DS-qk-1hU" id="YGf-Oq-DeS"/>
                         <segue destination="vrG-rT-PU9" kind="presentation" identifier="PlayButton" id="4aB-PJ-31b"/>
                     </connections>
                 </viewController>
@@ -325,6 +341,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="wRZ-SO-ng3"/>
-        <segue reference="B8O-6f-Lhf"/>
+        <segue reference="fGn-7Z-9jz"/>
     </inferredMetricsTieBreakers>
 </document>

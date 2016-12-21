@@ -10,7 +10,7 @@
 import UIKit
 
 class LevelController: UIViewController {
-    
+
     private var randomlySelectedColors : [UIColor] = []
     private var levelModelViewController = LevelController.self
     private var masterModule : MasterModule!
@@ -21,11 +21,15 @@ class LevelController: UIViewController {
     
     @IBOutlet weak var levelLabel: UILabel!
     @IBOutlet weak var mTimer: UILabel!
+    @IBOutlet weak var playButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.masterModule = MasterModule.getCurrentModule()
         CURRENT_LEVEL = masterModule.currentLevel
+        
+        self.playButton.setTitleColor(UIColor.whiteColor(), forState: .Normal)
+        self.playButton.backgroundColor = UIColor.blackColor()
         setTimer()
 
         /**
@@ -43,7 +47,6 @@ class LevelController: UIViewController {
                 self.displaySequenceColors();
             }
         }
-        
         self.startCountDownTimer()
     }
     

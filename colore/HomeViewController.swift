@@ -9,23 +9,45 @@ import SceneKit
 
 class HomeViewController: UIViewController{
     
+    @IBOutlet weak var homeLabel: UILabel!
+    @IBOutlet weak var helpButton: UIButton!
+    @IBOutlet weak var playButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // Set background
-        UIGraphicsBeginImageContext(self.view.frame.size)
-        UIImage(named: "colore_background")?.drawInRect(self.view.bounds)
-        
-        let image: UIImage = UIGraphicsGetImageFromCurrentImageContext()
-        
-        UIGraphicsEndImageContext()
-        
-        self.view.backgroundColor = UIColor(patternImage: image)
+        setBackground()
     }
     
-    /* 
-     * When Help button is clicked, shows the alert dialog.
-    */
+    /** Adds animation to home label and buttons **/
+    override func viewDidAppear(animated: Bool) {
+        /** Adds animation to the 'colore' home label **/
+        UIView.animateWithDuration(2.0, animations: {
+            self.homeLabel.center.y += self.view.bounds.width
+        })
+        
+        /** Adds animation to the play and help buttons **/
+        UIView.animateWithDuration(1.0, delay: 1.0,
+                                   options: [],
+                                   animations: {
+                                    self.playButton.alpha = 1.0
+                                    self.playButton.layer.backgroundColor = UIColor.blackColor().CGColor
+                                    self.playButton.setTitleColor(UIColor.whiteColor(), forState: .Normal)
+
+                                    self.helpButton.alpha = 1.0
+                                    self.helpButton.layer.backgroundColor = UIColor.blackColor().CGColor
+
+                                self.helpButton.setTitleColor(UIColor.whiteColor(), forState: .Normal)
+            }, completion: nil)
+    }
+    
+    /** This will make the view invisible when the view appears **/
+    override func viewWillAppear(animated: Bool) {
+        homeLabel.center.y -= view.bounds.width
+        playButton.alpha = 0.0
+        helpButton.alpha = 0.0
+    }
+    
+    /** When Help button is clicked, shows the alert dialog. **/
     @IBAction func onHelpButtonClicked(sender: UIButton) {
         
         let alert = UIAlertController(
@@ -38,6 +60,14 @@ class HomeViewController: UIViewController{
         alert.addAction(OKAction)
         
         presentViewController(alert, animated: true, completion: nil)
+    }
+    
+    private func setBackground() {
+        UIGraphicsBeginImageContext(self.view.frame.size)
+        UIImage(named: "colore_background")?.drawInRect(self.view.bounds)
+        let image: UIImage = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        self.view.backgroundColor = UIColor(patternImage: image)
     }
     
     private func getOverView() -> String {
@@ -86,7 +116,4 @@ class HomeViewController: UIViewController{
         
         return gameOver
     }
-    
-    
-    
 }
