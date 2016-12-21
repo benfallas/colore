@@ -70,7 +70,7 @@ class LevelController: UIViewController {
     func displaySequenceColors() {
         
         let buttonHeight = 60;
-        let buttonWidth = 300;
+        let buttonWidth = Int(view.bounds.width);
         
         let numOfButtons = masterModule.currentLevel + 2;
         var buttonTop = view.bounds.height / 10 + 10
