@@ -8,7 +8,7 @@
 - Has Login Screen that authenticates user (does not have to be to server) : 5
 - **Uses GCD for multi-threaded operations : 10**
 - **Defines and consumes protocol : 5**
-- **Uses Alert pattern : 5 **
+- **Uses Alert pattern : 5**
 - Uses Action Sheet pattern : 5
 - **Uses animation : 10**
 - Stores information to user settings : 5
@@ -22,7 +22,7 @@
 - Implements UITabBarController : 5
 - Implements UINavigationController : 5
 - Uses AlamoFire for internet connectivity : 10
-- **Has splash screen : 2 **
+- **Has splash screen : 2**
 - Uses Core Data : 15
 - Advanced GCD: dispatch groups, semaphores, etc. : 10
 - Implements basic internationalization strategy for all labels (not data) : 5
